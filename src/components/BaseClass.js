@@ -22,7 +22,8 @@ export default class Chart {
         this.items = null;
 
         this.initElements()
-        this.createLegend()
+        if (this.target!==null)
+            this.createLegend()
     }
 
     draw(){
@@ -65,7 +66,11 @@ export default class Chart {
     
         this.values_target = [... new Set(this.data.map(d => d[this.target]))]
 
-        this.colorScale = scaleOrdinal(schemeTableau10)
+        if (this.target==null)
+        this.colorScale = scaleOrdinal()
+            .domain(this.values_target).range(["black"])
+        else
+            this.colorScale = scaleOrdinal(schemeTableau10)
             .domain(this.values_target)
     
     }

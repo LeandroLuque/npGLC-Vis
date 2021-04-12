@@ -10,12 +10,13 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script>
 
-      d3.csv('data/spinels.csv').then(function(dataset){
-      //d3.csv('data/frogs.csv').then(function(dataset){
+      d3.csv('data/cars.csv').then(function(dataset){
     
       console.log(dataset.length)
+      console.log(glc)
 
-        var chart = new glc.newChart({
+
+        var chart = glc.newChart({
           data: dataset,
           width: screen.width,
           height: screen.height, 
@@ -23,12 +24,9 @@
           type: "radial", 
           //dimensions: ["sepal_length","sepal_width","petal_length","petal_width"], 
           //dimensions: ["c1","c2","c3","c4","c5","c6","c7","c8","c9","c10"],
-          //dimensions: ["economy","displacement","power","weight","mph","year"],
-          dimensions: ["SiO2","TiO2","V2O5","Al2O3","Cr2O3","FeO","Fe2O3","MnO","MgO","NiO","ZnO"],
+          dimensions: ["economy","displacement","power","weight","mph","year"],
           //dimensions: ["MFCCs_ 1","MFCCs_ 2","MFCCs_ 3","MFCCs_ 4","MFCCs_ 5"],//"MFCCs_ 6","MFCCs_ 7","MFCCs_ 8","MFCCs_ 9","MFCCs_10","MFCCs_11","MFCCs_12","MFCCs_13","MFCCs_14","MFCCs_15","MFCCs_16","MFCCs_17","MFCCs_18","MFCCs_19","MFCCs_20","MFCCs_21","MFCCs_22"],
-          
-          target: "cat",
-          //target: "cylinders",
+          target: "cylinders",
           //target: "class", 
           //target: "c11",
           //target: "Family", //Family,Genus,Species,
@@ -36,16 +34,8 @@
       
         })
 
-        //chart.setCurve('CURVE')
-        //chart.setOrientations([90, 122, 91, 329, 191, 8, 51, 221, 291, 126, 335 ]) // orientations for spinel
-    
-        //chart.setOrientations(["318","291","176","148","323","2"]) //orientations for cars
-        //chart.setOrientations([265, 199, 262, 146, 328, 150, 133, 120, 357, 342]) //orientations for synthetic
-
-        //chart.focusClass("8")
-
         chart.draw()
-        chart.setOpacity(0.1)
+        chart.setOpacity(1)
         chart.colorize(true)
 
       })

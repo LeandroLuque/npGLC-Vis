@@ -62,7 +62,7 @@ Generates a new GLC plot for the given array of *data*, returning an object corr
 * `select` - accesor by ID to the DOM element container. Also, it accepts body as valid accesor.
 * `type` - some of the possible options to generate a GLC plot. It must be 'radial' | 'parallel' | 'circular' | 'bush' | 'inline' | 'polygon' | 'seq-generic' | 'nseq-generic' . 
 * `dimensions` - array of fields name of the dimensions of the dataset.
-* `target` - field name of the label column of the dataset
+* `target` - field name of the label column of the dataset. If *target* is null (dataset has not ground label) the polylines are not colorized (useful for cluster analysis).
 * `dynamic` - boolean value to determine if data item is drawn statically or dynamically
 
 ```js
@@ -168,3 +168,8 @@ The library provide 3 basic interactions to manipulate the chart:
 * brush - allowing brush the axis
 * pan - move the chart
 * zoom - zoom out/zoom in when it is required.
+
+## Example
+
+
+
