@@ -171,5 +171,7 @@ The library provide 3 basic interactions to manipulate the chart:
 
 ## Example
 
+In this repo, we provide a minimal example (index.html) with the Cars Dataset to show the library in action. If you are a VSCode user, use the LiveServer add-on to launch a local server. Otherwise, we recommend use `python3 -m http.server 5500` to run the example. 
+
 
 
